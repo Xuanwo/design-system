@@ -1,0 +1,35 @@
+<!-- @dsCard group="Colors" viewport="700x200" name="Semantic status" subtitle="Success · Warning · Danger · Info — solid, subtle, border, text." -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { padding: 20px 24px; font-family: var(--font-sans); }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .col h4 { font-size: 11px; letter-spacing: var(--tracking-wide); text-transform: uppercase; font-weight: 600; margin-bottom: 10px; }
+  .solid { height: 38px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 12px; font-weight: 600; }
+  .pill { margin-top: 8px; padding: 6px 10px; border-radius: var(--radius-sm); font-size: 12px; font-weight: 500; display: inline-flex; }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="col"><h4 style="color:var(--success-text)">Success</h4>
+      <div class="solid" style="background:var(--success)">--success</div>
+      <span class="pill" style="background:var(--success-subtle);color:var(--success-text);border:1px solid var(--success-border)">Saved 中文</span>
+    </div>
+    <div class="col"><h4 style="color:var(--warning-text)">Warning</h4>
+      <div class="solid" style="background:var(--warning)">--warning</div>
+      <span class="pill" style="background:var(--warning-subtle);color:var(--warning-text);border:1px solid var(--warning-border)">Heads up</span>
+    </div>
+    <div class="col"><h4 style="color:var(--danger-text)">Danger</h4>
+      <div class="solid" style="background:var(--danger)">--danger</div>
+      <span class="pill" style="background:var(--danger-subtle);color:var(--danger-text);border:1px solid var(--danger-border)">Failed</span>
+    </div>
+    <div class="col"><h4 style="color:var(--info-text)">Info</h4>
+      <div class="solid" style="background:var(--info)">--info</div>
+      <span class="pill" style="background:var(--info-subtle);color:var(--info-text);border:1px solid var(--info-border)">Note</span>
+    </div>
+  </div>
+</body>
+</html>

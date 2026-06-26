@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Xuanwo Design System</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  body { min-height: 100vh; }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: var(--space-7) var(--space-5) var(--space-9); }
+  .top { display: flex; align-items: center; gap: 12px; }
+  .mark { color: var(--accent); display: inline-flex; }
+  .word { font-size: var(--text-xl); font-weight: 600; letter-spacing: var(--tracking-snug); white-space: nowrap; }
+  .word .cn { font-weight: 500; opacity: 0.82; margin-left: 3px; }
+  .toggle { margin-left: auto; height: 34px; padding: 0 12px; border: 1px solid var(--border-strong); background: var(--surface); color: var(--fg); border-radius: var(--radius-md); font: 500 var(--text-sm)/1 var(--font-sans); cursor: pointer; display: inline-flex; align-items: center; gap: 7px; transition: var(--transition-colors); }
+  .toggle:hover { background: var(--surface-2); }
+  h1 { font-family: var(--font-display); font-size: var(--text-5xl); font-weight: 600; line-height: var(--leading-tight); letter-spacing: var(--tracking-tight); margin: var(--space-8) 0 0; max-width: 16ch; text-wrap: balance; }
+  .lead { font-size: var(--text-lg); color: var(--fg-muted); line-height: var(--leading-relaxed); max-width: 60ch; margin: var(--space-5) 0 0; }
+  .eyebrow { font-size: var(--text-sm); letter-spacing: var(--tracking-wide); text-transform: uppercase; color: var(--accent-text); font-weight: 600; }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); margin-top: var(--space-7); }
+  .card { display: block; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: var(--space-5); text-decoration: none; color: var(--fg); transition: border-color var(--duration-fast) var(--ease-out), background-color var(--duration-fast) var(--ease-out); }
+  .card:hover { border-color: var(--border-strong); background: var(--surface-2); text-decoration: none; }
+  .card h3 { font-size: var(--text-md); font-weight: 600; margin: 0; display: flex; align-items: center; justify-content: space-between; }
+  .card p { font-size: var(--text-sm); color: var(--fg-muted); line-height: var(--leading-normal); margin: 8px 0 0; }
+  .card .tag { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--fg-faint); }
+  .arrow { color: var(--fg-faint); }
+  .note { margin-top: var(--space-7); padding-top: var(--space-5); border-top: 1px solid var(--border); font-size: var(--text-sm); color: var(--fg-subtle); line-height: var(--leading-relaxed); }
+  .note code { font-family: var(--font-mono); background: var(--surface-2); border: 1px solid var(--border); padding: 1px 5px; border-radius: var(--radius-xs); color: var(--accent-text); font-size: 12px; }
+  .swatches { display: flex; gap: 6px; margin-top: var(--space-6); }
+  .sw { width: 30px; height: 30px; border-radius: var(--radius-sm); border: 1px solid var(--border); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <img src="assets/logo/wordmark.png" alt="Xuanwo" style="height:34px;width:auto;display:block">
+    <button class="toggle" id="t" type="button" aria-label="Toggle theme">
+      <span id="tl">Dark</span>
+    </button>
+  </div>
+
+  <div style="margin-top:var(--space-8)">
+    <span class="eyebrow">Design system · 设计系统</span>
+    <h1>A calm system for content.</h1>
+    <p class="lead">Built for technical writing, talks, and idea explainers in 中文 &amp; English. Crisp and flat, depth from hairlines not shadows, one azure accent, full light/dark. 简约、有质感、为阅读而生。</p>
+    <div class="swatches" aria-hidden="true">
+      <span class="sw" style="background:var(--azure-300)"></span>
+      <span class="sw" style="background:var(--azure-500)"></span>
+      <span class="sw" style="background:var(--azure-700)"></span>
+      <span class="sw" style="background:var(--surface-2)"></span>
+      <span class="sw" style="background:var(--fg)"></span>
+    </div>
+  </div>
+
+  <div class="grid">
+    <a class="card" href="ui_kits/personal-site/index.html">
+      <h3>Personal site <span class="arrow">→</span></h3>
+      <p>Landing page UI kit — header, hero, projects, writing, footer. Light/dark.</p>
+      <span class="tag">ui_kits/personal-site</span>
+    </a>
+    <a class="card" href="ui_kits/blog/index.html">
+      <h3>Blog reading view <span class="arrow">→</span></h3>
+      <p>Long-form article — serif prose, code, callouts, sticky table of contents.</p>
+      <span class="tag">ui_kits/blog</span>
+    </a>
+    <a class="card" href="templates/slide-deck/SlideDeck.dc.html">
+      <h3>Slide deck template <span class="arrow">→</span></h3>
+      <p>An 8-slide talk deck at 1920×1080 — title, sections, comparison, quote, code.</p>
+      <span class="tag">templates/slide-deck</span>
+    </a>
+    <a class="card" href="readme.md">
+      <h3>Design guide <span class="arrow">→</span></h3>
+      <p>Voice, color, type, space, motion, iconography, and the full file manifest.</p>
+      <span class="tag">readme.md</span>
+    </a>
+  </div>
+
+  <p class="note">Browse every token, component and specimen in the <strong>Design System</strong> tab. Consumers link one file — <code>styles.css</code> — and load components from <code>window.XuanwoDesignSystem_8e9a9d</code> after <code>_ds_bundle.js</code>.</p>
+</div>
+
+<script>
+  (function () {
+    var root = document.documentElement, btn = document.getElementById('t'), lbl = document.getElementById('tl');
+    try { var saved = localStorage.getItem('xw-theme'); if (saved) root.dataset.theme = saved; } catch (e) {}
+    function sync() { lbl.textContent = root.dataset.theme === 'dark' ? 'Light' : 'Dark'; }
+    sync();
+    btn.addEventListener('click', function () {
+      var next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      root.dataset.theme = next;
+      try { localStorage.setItem('xw-theme', next); } catch (e) {}
+      sync();
+    });
+  })();
+</script>
+</body>
+</html>

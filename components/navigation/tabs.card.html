@@ -1,0 +1,48 @@
+<!-- @dsCard group="Components" viewport="700x300" name="Navigation — Tabs" subtitle="Underline & pill variants, with counts" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>
+  body { padding: 22px 24px; font-family: var(--font-sans); background: var(--bg); }
+  .glabel { font-size: 11px; letter-spacing: var(--tracking-wide); text-transform: uppercase; color: var(--fg-subtle); font-weight: 600; margin: 0 0 10px; }
+  .block { margin-bottom: 22px; }
+  .panel { font-size: var(--text-base); color: var(--fg-muted); }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { Tabs } = window.XuanwoDesignSystem_8e9a9d;
+function Demo() {
+  return (
+    <React.Fragment>
+      <div className="block">
+        <div className="glabel">Underline</div>
+        <Tabs defaultValue="readme" items={[
+          { value: "readme", label: "README", content: <p className="panel">One API for every storage backend.</p> },
+          { value: "issues", label: "Issues", count: 12, content: <p className="panel">12 open issues.</p> },
+          { value: "actions", label: "Actions", content: <p className="panel">CI is green.</p> },
+          { value: "wiki", label: "Wiki", disabled: true },
+        ]} />
+      </div>
+      <div className="block">
+        <div className="glabel">Pill</div>
+        <Tabs variant="pill" defaultValue="all" items={[
+          { value: "all", label: "All" },
+          { value: "rust", label: "Rust" },
+          { value: "notes", label: "Notes" },
+        ]} />
+      </div>
+    </React.Fragment>
+  );
+}
+ReactDOM.createRoot(document.getElementById("root")).render(<Demo />);
+</script>
+</body>
+</html>

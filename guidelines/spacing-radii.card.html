@@ -1,0 +1,23 @@
+<!-- @dsCard group="Spacing" viewport="700x160" name="Radii" subtitle="Small & crisp — pills reserved for dots, avatars, switches." -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { padding: 22px 26px; font-family: var(--font-sans); display: flex; gap: 22px; align-items: flex-end; }
+  .item { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .box { width: 72px; height: 56px; background: var(--accent-subtle); border: 1px solid var(--accent-border); }
+  .name { font-family: var(--font-mono); font-size: 11px; color: var(--fg-subtle); }
+  .px { font-size: 10px; color: var(--fg-faint); }
+</style>
+</head>
+<body>
+  <div class="item"><div class="box" style="border-radius:var(--radius-xs)"></div><span class="name">--radius-xs</span><span class="px">3px</span></div>
+  <div class="item"><div class="box" style="border-radius:var(--radius-sm)"></div><span class="name">--radius-sm</span><span class="px">4px</span></div>
+  <div class="item"><div class="box" style="border-radius:var(--radius-md)"></div><span class="name">--radius-md</span><span class="px">6px · default</span></div>
+  <div class="item"><div class="box" style="border-radius:var(--radius-lg)"></div><span class="name">--radius-lg</span><span class="px">8px</span></div>
+  <div class="item"><div class="box" style="border-radius:var(--radius-xl)"></div><span class="name">--radius-xl</span><span class="px">12px</span></div>
+  <div class="item"><div class="box" style="width:56px;border-radius:var(--radius-full)"></div><span class="name">--radius-full</span><span class="px">pill</span></div>
+</body>
+</html>

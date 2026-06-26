@@ -1,0 +1,32 @@
+<!-- @dsCard group="Brand" viewport="700x170" name="Motion & easing" subtitle="Short, quiet transitions. Fades & slides — never bounce." -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { padding: 24px 28px; font-family: var(--font-sans); }
+  .row { display: flex; gap: 28px; align-items: flex-start; }
+  .demo { display: flex; flex-direction: column; gap: 8px; }
+  .track { width: 150px; height: 40px; background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-md); position: relative; overflow: hidden; }
+  .dot { position: absolute; top: 9px; left: 8px; width: 22px; height: 22px; border-radius: var(--radius-full); background: var(--accent); animation: slide 2.4s infinite; }
+  .e2 { animation-timing-function: var(--ease-in-out); }
+  .e1 { animation-timing-function: var(--ease-out); }
+  @keyframes slide { 0%,15% { left: 8px; } 50%,65% { left: 120px; } 100% { left: 8px; } }
+  .lbl { font-family: var(--font-mono); font-size: 11px; color: var(--fg-subtle); }
+  .specs { font-size: var(--text-sm); color: var(--fg-muted); line-height: 1.7; }
+  .specs code { font-family: var(--font-mono); font-size: 11px; color: var(--accent-text); }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="demo"><div class="track"><div class="dot e1"></div></div><span class="lbl">--ease-out (default)</span></div>
+    <div class="demo"><div class="track"><div class="dot e2"></div></div><span class="lbl">--ease-in-out</span></div>
+    <div class="specs">
+      <div><code>--duration-fast</code> 120ms · hovers, color</div>
+      <div><code>--duration-base</code> 180ms · enter / theme</div>
+      <div><code>--duration-slow</code> 280ms · overlays</div>
+    </div>
+  </div>
+</body>
+</html>

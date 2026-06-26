@@ -1,0 +1,30 @@
+<!-- @dsCard group="Colors" viewport="700x160" name="Accent in use" subtitle="States: default → hover → active → subtle → as-text." -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { padding: 22px 24px; font-family: var(--font-sans); display: flex; flex-direction: column; gap: 18px; }
+  .row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  .btn { padding: 8px 16px; border-radius: var(--radius-md); font-size: var(--text-base); font-weight: 600; border: none; }
+  .swatch { display: inline-flex; flex-direction: column; gap: 6px; align-items: center; font-family: var(--font-mono); font-size: 10px; color: var(--fg-subtle); }
+  .dot { width: 44px; height: 44px; border-radius: var(--radius-md); }
+  .link { color: var(--accent-text); font-weight: 600; }
+  .tint { background: var(--accent-subtle); color: var(--accent-text); border: 1px solid var(--accent-border); padding: 6px 12px; border-radius: var(--radius-sm); font-size: var(--text-sm); font-weight: 500; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <span class="swatch"><span class="dot" style="background:var(--accent)"></span>accent</span>
+    <span class="swatch"><span class="dot" style="background:var(--accent-hover)"></span>hover</span>
+    <span class="swatch"><span class="dot" style="background:var(--accent-active)"></span>active</span>
+    <span class="swatch"><span class="dot" style="background:var(--accent-subtle);border:1px solid var(--accent-border)"></span>subtle</span>
+  </div>
+  <div class="row">
+    <button class="btn" style="background:var(--accent);color:var(--accent-fg)">Primary action</button>
+    <span class="tint">Tinted chip</span>
+    <a class="link" href="#">Accent as link / 漩涡 →</a>
+  </div>
+</body>
+</html>

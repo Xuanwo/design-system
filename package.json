@@ -1,0 +1,13 @@
+{
+  "name": "xuanwo-design-system",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-design-system.mjs",
+    "clean": "rm -f _ds_bundle.js _ds_manifest.json _adherence.oxlintrc.json"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.1"
+  }
+}

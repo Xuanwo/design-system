@@ -1,0 +1,87 @@
+<!-- @dsCard group="Blog" viewport="1080x820" name="Article reading view" subtitle="Long-form post: header, prose, code, callouts, TOC" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How OpenDAL reads a file · Xuanwo</title>
+<link rel="stylesheet" href="../../styles.css">
+<script>
+  try { var t = localStorage.getItem("xw-theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>
+  html, body { background: var(--bg); }
+  .topbar { position: sticky; top: 0; z-index: 100; background: color-mix(in srgb, var(--bg) 82%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
+  .topbar__inner { max-width: 1024px; margin: 0 auto; height: 56px; padding: 0 var(--space-5); display: flex; align-items: center; gap: var(--space-4); }
+  .shell { max-width: 1024px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) 232px; gap: var(--space-7); padding: 0 var(--space-5) var(--space-7); }
+  @media (max-width: 920px) { .shell { grid-template-columns: minmax(0,1fr); } .shell > nav { display: none; } }
+
+  /* ---- Long-form prose ---- */
+  .prose { font-family: var(--font-reading); color: var(--fg); font-size: var(--text-lg); line-height: var(--leading-relaxed); padding: var(--space-6) 0 0; max-width: 700px; margin: 0 auto; }
+  .prose > * { margin-left: var(--space-5); margin-right: var(--space-5); }
+  .prose .lead { font-size: var(--text-xl); color: var(--fg-muted); line-height: var(--leading-relaxed); }
+  .prose h2 { font-family: var(--font-heading); font-size: var(--text-2xl); font-weight: 600; letter-spacing: var(--tracking-snug); margin: var(--space-7) var(--space-5) var(--space-3); scroll-margin-top: 80px; }
+  .prose p { margin-top: var(--space-4); margin-bottom: var(--space-4); }
+  .prose a { color: var(--accent-text); text-decoration: underline; text-underline-offset: 0.15em; text-decoration-color: var(--accent-border); }
+  .prose ol, .prose ul { margin: var(--space-4) var(--space-5); padding-left: 1.5em; }
+  .prose li { margin: var(--space-2) 0; padding-left: 0.2em; }
+  .prose li::marker { color: var(--fg-faint); }
+  .prose blockquote { border-left: 3px solid var(--accent); margin: var(--space-6) var(--space-5); padding: 4px 0 4px var(--space-4); color: var(--fg-muted); font-style: italic; font-size: var(--text-xl); }
+  .prose p code, .prose li code, .prose .lead code, .prose blockquote code, .prose .xw-callout code {
+    font-family: var(--font-mono); font-size: 0.82em; background: var(--surface-2);
+    border: 1px solid var(--border); padding: 1px 5px; border-radius: var(--radius-xs); color: var(--accent-text);
+    font-style: normal;
+  }
+  /* design-system blocks reset to sans and get breathing room */
+  .prose .xw-code, .prose .xw-callout { font-family: var(--font-sans); margin: var(--space-5) var(--space-5); }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" src="icons.jsx"></script>
+<script type="text/babel" src="ArticleHeader.jsx"></script>
+<script type="text/babel" src="ArticleBody.jsx"></script>
+<script type="text/babel" src="TableOfContents.jsx"></script>
+<script type="text/babel" src="ArticleFooter.jsx"></script>
+<script type="text/babel">
+const { Logo, IconButton } = window.XuanwoDesignSystem_8e9a9d;
+
+function TopBar() {
+  const Icon = window.Icon;
+  const [theme, setTheme] = React.useState(() => document.documentElement.dataset.theme || "light");
+  const toggle = () => { const n = theme === "dark" ? "light" : "dark"; document.documentElement.dataset.theme = n; try { localStorage.setItem("xw-theme", n); } catch(e){} setTheme(n); };
+  return (
+    <div className="topbar"><div className="topbar__inner">
+      <Logo height={24} src="../../assets/logo/wordmark.png" />
+      <div style={{ marginLeft: "auto", display: "flex", gap: 4 }}>
+        <IconButton label="Search">{Icon.search()}</IconButton>
+        <IconButton label="Toggle theme" onClick={toggle}>{theme === "dark" ? Icon.sun() : Icon.moon()}</IconButton>
+      </div>
+    </div></div>
+  );
+}
+
+function App() {
+  const { ArticleHeader, ArticleBody, TableOfContents, ArticleFooter } = window;
+  return (
+    <React.Fragment>
+      <TopBar />
+      <div className="shell">
+        <div className="main">
+          <ArticleHeader />
+          <ArticleBody />
+          <ArticleFooter />
+        </div>
+        <TableOfContents />
+      </div>
+    </React.Fragment>
+  );
+}
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>

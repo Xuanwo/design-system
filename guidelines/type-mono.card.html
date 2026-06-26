@@ -1,0 +1,25 @@
+<!-- @dsCard group="Type" viewport="700x180" name="Mono / code" subtitle="Fira Code with programming ligatures." -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { padding: 22px 26px; font-family: var(--font-sans); }
+  .label { font-size: 11px; letter-spacing: var(--tracking-wide); text-transform: uppercase; color: var(--fg-subtle); font-weight: 600; margin-bottom: 12px; }
+  pre { font-family: var(--font-mono); font-size: var(--text-base); line-height: 1.6; background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px 16px; color: var(--fg); font-feature-settings: "calt" 1; overflow:auto; }
+  .k { color: var(--accent-text); }
+  .c { color: var(--fg-subtle); }
+  .s { color: var(--success-text); }
+  .lig { margin-top: 12px; font-family: var(--font-mono); font-size: 13px; color: var(--fg-muted); font-feature-settings: "calt" 1; }
+</style>
+</head>
+<body>
+  <div class="label">Fira Code · ligatures on</div>
+<pre><span class="c">// 漩涡 — async stream over a vortex of bytes</span>
+<span class="k">async fn</span> read(buf: &amp;<span class="k">mut</span> [u8]) -&gt; Result&lt;usize&gt; {
+    <span class="k">if</span> n &gt;= cap &amp;&amp; ready != <span class="s">false</span> { flush()<span class="c">?</span> }
+}</pre>
+  <span class="lig">-&gt;&nbsp;&nbsp;=&gt;&nbsp;&nbsp;!=&nbsp;&nbsp;&gt;=&nbsp;&nbsp;&lt;=&nbsp;&nbsp;==&nbsp;&nbsp;&amp;&amp;&nbsp;&nbsp;|&gt;&nbsp;&nbsp;::&nbsp;&nbsp;++&nbsp;&nbsp;...&nbsp;&nbsp;</span>
+</body>
+</html>

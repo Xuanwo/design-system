@@ -1,0 +1,36 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Accent — Azure ramp" subtitle="The logo's screen-blue. One accent, ten steps; 500 is brand." -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { padding: 20px 24px; font-family: var(--font-sans); }
+  .ramp { display: flex; gap: 0; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border); }
+  .step { flex: 1; height: 64px; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 6px; }
+  .step span { font-size: 11px; font-family: var(--font-mono); font-weight: 500; }
+  .row { display: flex; gap: 16px; margin-top: 12px; align-items: center; }
+  .chip { font-size: var(--text-sm); color: var(--fg-muted); }
+  .chip b { color: var(--fg); font-weight: 600; }
+  code { background: var(--surface-2); padding: 1px 6px; border-radius: var(--radius-xs); color: var(--accent-text); }
+</style>
+</head>
+<body>
+  <div class="ramp">
+    <div class="step" style="background:var(--azure-50)"><span style="color:#0a6aa8">50</span></div>
+    <div class="step" style="background:var(--azure-100)"><span style="color:#0a6aa8">100</span></div>
+    <div class="step" style="background:var(--azure-200)"><span style="color:#06425f">200</span></div>
+    <div class="step" style="background:var(--azure-300)"><span style="color:#052f44">300</span></div>
+    <div class="step" style="background:var(--azure-400)"><span style="color:#fff">400</span></div>
+    <div class="step" style="background:var(--azure-500)"><span style="color:#fff">500</span></div>
+    <div class="step" style="background:var(--azure-600)"><span style="color:#fff">600</span></div>
+    <div class="step" style="background:var(--azure-700)"><span style="color:#fff">700</span></div>
+    <div class="step" style="background:var(--azure-800)"><span style="color:#cbe6f8">800</span></div>
+    <div class="step" style="background:var(--azure-900)"><span style="color:#9bd0f2">900</span></div>
+  </div>
+  <div class="row">
+    <span class="chip"><b>--azure-500</b> · <code>#0f83cf</code> · brand accent (light)</span>
+    <span class="chip"><b>--accent</b> · <code>#38a8ec</code> · accent (dark)</span>
+  </div>
+</body>
+</html>

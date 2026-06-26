@@ -1,0 +1,13 @@
+.DS_Store
+
+node_modules/
+dist/
+build/
+
+_ds_bundle.js
+_ds_manifest.json
+_adherence.oxlintrc.json
+templates/slide-deck/.thumbnail
+
+uploads/
+explorations/

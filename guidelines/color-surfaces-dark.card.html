@@ -1,0 +1,33 @@
+<!-- @dsCard group="Colors" viewport="700x190" name="Surfaces & text — Dark" subtitle="The same roles, near-black. Full dual theme." -->
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { padding: 20px 24px; font-family: var(--font-sans); background: var(--bg); }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .box { height: 52px; border-radius: var(--radius-md); border: 1px solid var(--border); }
+  .lbl { margin-top: 7px; font-family: var(--font-mono); font-size: 11px; color: var(--fg); }
+  .sub { font-size: 11px; color: var(--fg-subtle); }
+  h4 { font-size: 11px; letter-spacing: var(--tracking-wide); text-transform: uppercase; color: var(--fg-subtle); font-weight: 600; margin-bottom: 12px; }
+  .text-row { display: flex; gap: 22px; margin-top: 18px; align-items: baseline; }
+  .text-row span { font-size: var(--text-lg); }
+</style>
+</head>
+<body>
+  <h4>Surfaces</h4>
+  <div class="grid">
+    <div class="sw"><div class="box" style="background:var(--bg)"></div><div class="lbl">--bg</div><div class="sub">page</div></div>
+    <div class="sw"><div class="box" style="background:var(--surface)"></div><div class="lbl">--surface</div><div class="sub">cards</div></div>
+    <div class="sw"><div class="box" style="background:var(--surface-2)"></div><div class="lbl">--surface-2</div><div class="sub">fills, hover</div></div>
+    <div class="sw"><div class="box" style="background:var(--surface-3)"></div><div class="lbl">--surface-3</div><div class="sub">pressed</div></div>
+  </div>
+  <div class="text-row">
+    <span style="color:var(--fg);font-weight:600">--fg</span>
+    <span style="color:var(--fg-muted)">--fg-muted</span>
+    <span style="color:var(--fg-subtle)">--fg-subtle</span>
+    <span style="color:var(--fg-faint)">--fg-faint</span>
+  </div>
+</body>
+</html>

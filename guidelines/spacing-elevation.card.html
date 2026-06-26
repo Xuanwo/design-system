@@ -1,0 +1,25 @@
+<!-- @dsCard group="Spacing" viewport="700x190" name="Elevation — overlays only" subtitle="The only sanctioned shadows: menus, dialogs, tooltips." -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { padding: 26px; font-family: var(--font-sans); background: var(--surface-2); display: flex; gap: 26px; align-items: center; }
+  .pop { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 8px; width: 220px; box-shadow: var(--shadow-overlay); }
+  .mi { padding: 8px 10px; border-radius: var(--radius-sm); font-size: var(--text-base); color: var(--fg); display:flex; justify-content:space-between; }
+  .mi:hover, .mi.active { background: var(--surface-2); }
+  .mi .kbd { font-family: var(--font-mono); font-size: 11px; color: var(--fg-faint); }
+  .note { font-size: var(--text-sm); color: var(--fg-subtle); line-height: var(--leading-normal); max-width: 300px; }
+  .note code { background: var(--surface); padding: 1px 5px; border-radius: var(--radius-xs); font-size: 11px; color: var(--accent-text); border:1px solid var(--border); }
+</style>
+</head>
+<body>
+  <div class="pop">
+    <div class="mi active">Copy link <span class="kbd">⌘C</span></div>
+    <div class="mi">Duplicate <span class="kbd">⌘D</span></div>
+    <div class="mi">Move to… <span class="kbd">⌘⇧M</span></div>
+  </div>
+  <p class="note"><code>--shadow-overlay</code> &amp; <code>--shadow-popover</code> — faint, large-radius casts that deepen in dark mode. Never on cards, inputs or buttons.</p>
+</body>
+</html>
