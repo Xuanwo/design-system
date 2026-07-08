@@ -18,7 +18,7 @@ If the user invokes this skill without any other guidance, ask them what they wa
 
 ## Essence (don't violate)
 - One **azure** accent (`--azure-500` `#0f83cf`, the logo's screen-blue) on cool near-neutrals; **full dual theme** via `[data-theme]` and OS preference — always use semantic tokens (`--accent`, `--fg`, `--surface`).
-- **Serif (Source Serif 4 / Noto Serif SC) for display & long-form; humanist sans (Source Sans 3 / Noto Sans SC) for UI; Fira Code for code.** 中文 + English carry equal weight.
+- **Serif (Source Serif 4 / Noto Serif SC) for display & long-form; humanist sans (Source Sans 3 / Noto Sans SC) for UI; Fira Code for code.** One language per artifact — English or 中文 throughout, never mixed (proper nouns and code identifiers excepted).
 - **Crisp & flat: depth from hairline borders + layered surfaces, NOT shadows** (shadows only on floating overlays). Small 6px radii. Sentence case. No emoji.
 - **Quiet, short motion** — fades and gentle slides, no bounce, nothing abrupt.
 - Icons: **Lucide** style (24px, ~1.7 stroke, outline, `currentColor`).

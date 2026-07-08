@@ -1,6 +1,6 @@
 # Xuanwo Design System
 
-A personal design system for **Xuanwo (漩涡)** — built for *content*. It dresses technical writing, talks, animation/idea explainers, docs, and a personal site in one calm, modern, bilingual (中文 / English) voice. The feeling: **technical, modern, quietly confident, easy to read — full of texture in the details, never busy.** Reference point: the restraint and precision of Linear.
+A personal design system for **Xuanwo (漩涡)** — built for *content*. It dresses technical writing, talks, animation/idea explainers, docs, and a personal site in one calm, modern voice, in English or 中文 — one language per artifact. The feeling: **technical, modern, quietly confident, easy to read — full of texture in the details, never busy.** Reference point: the restraint and precision of Linear.
 
 > **Sources.** This system was created from a written brief, not an existing codebase or Figma file. There are no external design sources to link. Content in the UI kits is illustrative and reflects Xuanwo's real focus areas (Apache OpenDAL, Databend, Rust storage); swap in real data when productionizing.
 
@@ -35,7 +35,7 @@ How copy is written across this brand.
 
 - **Voice — a knowledgeable peer, thinking out loud.** Calm, precise, a little dry. Explains *why*, not just *what*. Never breathless, never salesy. “A good abstraction doesn't hide the cost — it makes the cost predictable.”
 - **Person.** First person singular for the personal site (“Hi, I'm Xuanwo”, “I maintain…”). Second person (“you”) when teaching in docs/articles (“You call `op.read(path)`…”). “We” only for genuinely collaborative project work.
-- **Bilingual by design.** 中文 and English sit side by side and carry equal weight — a 中文 subtitle under an English title, or a 中文 sentence closing an English paragraph (“把复杂留给库,把简单留给用户。”). 中文 is never an afterthought or a literal translation; it adds rhythm and a second register. Latin and CJK share the Source / Source Han type lineage so the mix never jars.
+- **One language per artifact.** The brand speaks both English and 中文, but never in the same piece of content: an English page, deck or article is English throughout; a 中文 one is 中文 throughout (“把复杂留给库,把简单留给用户。”). Pick the language for the audience, then stay in it — no 中文 subtitle under an English title, no closing line in the other language, no decorative code-switching. Two exceptions: proper nouns and code identifiers keep their canonical form inside 中文 prose (`Operator`, S3, Apache OpenDAL), and 中文 written as content is authored natively, never translated from an English draft. Latin and CJK share the Source / Source Han type lineage, so both languages carry the same voice.
 - **Casing.** Sentence case everywhere — headings, buttons, labels. Title Case is avoided. ALL-CAPS only for tiny eyebrow labels with wide tracking. 中文 uses no case but mirrors the same restraint.
 - **Punctuation.** English uses standard punctuation. 中文 uses full-width Chinese punctuation (,。、“”) — note the comma after “复杂” is a full-width `,`. Em dashes for asides. Sparing exclamation marks (effectively none).
 - **Tone of UI copy.** Short, literal, verb-first. “Read the writing”, “All posts”, “Follow”. Error/empty states are plain and blame-free.

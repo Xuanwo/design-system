@@ -1,4 +1,4 @@
-<!-- @dsCard group="Type" viewport="700x250" name="Body & long-form reading" subtitle="Sans for UI, serif for articles. 中英文 share rhythm." -->
+<!-- @dsCard group="Type" viewport="700x250" name="Body & long-form reading" subtitle="Sans for UI, serif for articles — same rhythm in either language, one per artifact." -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,7 +9,7 @@
   .label { font-size: 11px; letter-spacing: var(--tracking-wide); text-transform: uppercase; color: var(--fg-subtle); font-weight: 600; margin-bottom: 8px; }
   .ui { font-size: var(--text-base); line-height: var(--leading-normal); color: var(--fg-muted); }
   .read { font-family: var(--font-reading); font-size: var(--text-lg); line-height: var(--leading-relaxed); color: var(--fg); }
-  .read .cn { display: block; margin-top: 8px; }
+  .read.cn { margin-top: 8px; }
 </style>
 </head>
 <body>
@@ -18,8 +18,9 @@
     <p class="ui">Source Sans 3 carries interface text and short copy. Warm, humanist, neutral enough to disappear — built to be read at 15–16px in dense, technical layouts.</p>
   </div>
   <div>
-    <div class="label">Long-form · Serif</div>
-    <p class="read">For articles, the serif slows the eye and adds a literary, considered tone.<span class="cn">中文段落使用 Noto Sans / Serif，与拉丁字母共享节奏与字重，混排不跳行。</span></p>
+    <div class="label">Long-form · Serif — English or 中文, one per artifact</div>
+    <p class="read">For articles, the serif slows the eye and adds a literary, considered tone.</p>
+    <p class="read cn" lang="zh">中文文章使用 Noto Serif，与拉丁字母共享节奏与字重，整篇自成一体。</p>
   </div>
 </body>
 </html>

@@ -1,10 +1,11 @@
 const { Tag, Button } = window.XuanwoDesignSystem_8e9a9d;
 
+// Posts are written in English or 中文 — one language per article.
 const POSTS = [
-  { date: "2026-06-12", title: "How OpenDAL reads a file", cn: "OpenDAL 是如何读取文件的", read: "11 min", tags: ["rust", "storage"] },
-  { date: "2026-05-28", title: "Async traits, two years later", cn: "异步 trait,两年之后", read: "8 min", tags: ["rust", "async"] },
-  { date: "2026-04-30", title: "The cost of a good abstraction", cn: "一个好抽象的代价", read: "6 min", tags: ["design"] },
-  { date: "2026-03-15", title: "Notes on building in the open", cn: "关于开放式开发的笔记", read: "5 min", tags: ["open-source"] },
+  { date: "2026-06-12", title: "How OpenDAL reads a file", read: "11 min", tags: ["rust", "storage"] },
+  { date: "2026-05-28", title: "异步 trait,两年之后", read: "8 min", tags: ["rust", "async"] },
+  { date: "2026-04-30", title: "The cost of a good abstraction", read: "6 min", tags: ["design"] },
+  { date: "2026-03-15", title: "关于开放式开发的笔记", read: "5 min", tags: ["open-source"] },
 ];
 
 function PostRow({ p }) {
@@ -22,7 +23,6 @@ function PostRow({ p }) {
       <time style={{ fontSize: "var(--text-sm)", color: "var(--fg-subtle)", fontFamily: "var(--font-mono)" }}>{date}</time>
       <div>
         <div style={{ fontSize: "var(--text-lg)", fontWeight: 600, color: "var(--fg)", letterSpacing: "var(--tracking-snug)" }}>{p.title}</div>
-        <div style={{ fontSize: "var(--text-base)", color: "var(--fg-subtle)", marginTop: 2 }}>{p.cn}</div>
         <div style={{ display: "flex", gap: 6, marginTop: 10 }}>{p.tags.map((t) => <Tag key={t} hash>{t}</Tag>)}</div>
       </div>
       <span style={{ display: "inline-flex", alignItems: "center", gap: 5, fontSize: "var(--text-sm)", color: "var(--fg-faint)", whiteSpace: "nowrap" }}>

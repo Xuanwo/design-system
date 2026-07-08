@@ -16,7 +16,7 @@ function ArticleHeader() {
         lineHeight: "var(--leading-tight)", letterSpacing: "var(--tracking-tight)", margin: 0, textWrap: "balance",
       }}>How OpenDAL reads a file</h1>
       <p style={{ fontFamily: "var(--font-display)", fontSize: "var(--text-xl)", color: "var(--fg-subtle)", margin: "var(--space-3) 0 0", fontWeight: 400 }}>
-        OpenDAL 是如何读取文件的
+        What actually happens between op.read(path) and your bytes
       </p>
       <div style={{
         display: "flex", alignItems: "center", gap: "var(--space-4)", marginTop: "var(--space-6)",

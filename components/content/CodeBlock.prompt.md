@@ -2,7 +2,7 @@ Code sample for posts, docs, and slides. Renders plain text in Fira Code with a 
 
 ```jsx
 <CodeBlock language="rust" filename="src/main.rs" lineNumbers highlight={[2]} code={`fn main() {
-    println!("漩涡");
+    println!("hello");
 }`} />
 
 <CodeBlock language="bash" code="cargo add opendal" />

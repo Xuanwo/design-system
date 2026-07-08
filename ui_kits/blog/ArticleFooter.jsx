@@ -18,10 +18,10 @@ function ArticleFooter() {
       <div style={{ display: "flex", gap: "var(--space-4)", padding: "var(--space-6) 0", alignItems: "flex-start" }}>
         <Avatar src="../../assets/logo/logo.jpeg" name="Xuanwo" size="lg" />
         <div>
-          <div style={{ fontWeight: 600, color: "var(--fg)", fontSize: "var(--text-md)" }}>Xuanwo · 漩涡</div>
+          <div style={{ fontWeight: 600, color: "var(--fg)", fontSize: "var(--text-md)" }}>Xuanwo</div>
           <p style={{ fontSize: "var(--text-base)", color: "var(--fg-muted)", lineHeight: "var(--leading-relaxed)", margin: "4px 0 0", maxWidth: 480 }}>
             Open-source developer working on storage &amp; data systems. PMC Chair of Apache OpenDAL.
-            写代码,也写关于代码的事。
+            Writes code, and writes about writing it.
           </p>
         </div>
         <Button variant="primary" size="sm" style={{ marginLeft: "auto", flex: "none" }}>Follow</Button>

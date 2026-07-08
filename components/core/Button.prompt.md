@@ -1,7 +1,7 @@
 Action trigger — use `variant="primary"` for the single main action on a view, `secondary`/`ghost` for everything else, `danger` for destructive.
 
 ```jsx
-<Button variant="primary" iconRight={<ArrowRight />}>开始 Get started</Button>
+<Button variant="primary" iconRight={<ArrowRight />}>Get started</Button>
 <Button variant="secondary">Cancel</Button>
 <Button variant="ghost" size="sm">Skip</Button>
 <Button variant="danger" loading>Deleting…</Button>

@@ -1,14 +1,14 @@
 # UI Kit — Blog
 
-A long-form article reading view — the core surface for Xuanwo's writing (technical posts, idea explanations, 中英文).
+A long-form article reading view — the core surface for Xuanwo's writing (technical posts and idea explanations, in English or 中文 — one language per article).
 
 ## Screens
-- **`index.html`** — a full article page: sticky top bar with theme toggle, article header (title + bilingual subtitle + author meta), prose body with code, callouts and a blockquote, a sticky table of contents, and an article footer (reactions, author bio, prev/next).
+- **`index.html`** — a full article page: sticky top bar with theme toggle, article header (title + dek + author meta), prose body with code, callouts and a blockquote, a sticky table of contents, and an article footer (reactions, author bio, prev/next).
 
 ## Composition
 | File | Role |
 |---|---|
-| `ArticleHeader.jsx` | Back link, topic `Tag`s, serif display title + 中文 subtitle, `Avatar` + date + reading time. |
+| `ArticleHeader.jsx` | Back link, topic `Tag`s, serif display title + dek, `Avatar` + date + reading time. |
 | `ArticleBody.jsx` | The `.prose` article — headings, paragraphs, lists, blockquote, plus `CodeBlock` and `Callout` from the system. |
 | `TableOfContents.jsx` | Sticky right-rail TOC with an active-section indicator. |
 | `ArticleFooter.jsx` | Like/share actions, author bio card, prev/next `Card`s. |
