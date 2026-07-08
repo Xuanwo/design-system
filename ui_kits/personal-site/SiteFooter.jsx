@@ -16,7 +16,7 @@ function SiteFooter() {
         <div>
           <Logo height={28} src="../../assets/logo/wordmark.png" />
           <p style={{ fontSize: "var(--text-sm)", color: "var(--fg-subtle)", lineHeight: "var(--leading-relaxed)", maxWidth: 260, marginTop: 14 }}>
-            Building reliable storage infrastructure, in the open. 用心写每一行代码。
+            Building reliable storage infrastructure, in the open.
           </p>
           <div style={{ display: "flex", gap: 4, marginTop: 16 }}>
             <IconButton label="GitHub" size="sm">{Icon.github()}</IconButton>
@@ -41,7 +41,7 @@ function SiteFooter() {
         borderTop: "1px solid var(--border)", display: "flex", justifyContent: "space-between",
         fontSize: "var(--text-sm)", color: "var(--fg-faint)",
       }}>
-        <span>© 2026 Xuanwo · 漩涡</span>
+        <span>© 2026 Xuanwo</span>
         <span style={{ fontFamily: "var(--font-mono)" }}>Built with the Xuanwo Design System</span>
       </div>
     </footer>

@@ -3,7 +3,7 @@
 A high-fidelity recreation of Xuanwo's personal site landing page, built entirely from the design system primitives.
 
 ## Screens
-- **`index.html`** — the landing page: sticky header with theme toggle, hero intro (中英文), open-source project grid, recent writing list, and footer.
+- **`index.html`** — the landing page: sticky header with theme toggle, hero intro, open-source project grid, recent writing list (posts in English or 中文, one language each), and footer.
 
 ## Composition
 | File | Role |

@@ -1,6 +1,6 @@
 const { Callout, CodeBlock } = window.XuanwoDesignSystem_8e9a9d;
 
-const READ_FN = `use opendal::Operator;\nuse opendal::services::S3;\n\nasync fn read_config(op: Operator) -> Result<Bytes> {\n    // A single call — the layer stack handles retries,\n    // logging, and concurrency underneath.\n    let bs = op.read("config/漩涡.toml").await?;\n    Ok(bs)\n}`;
+const READ_FN = `use opendal::Operator;\nuse opendal::services::S3;\n\nasync fn read_config(op: Operator) -> Result<Bytes> {\n    // A single call — the layer stack handles retries,\n    // logging, and concurrency underneath.\n    let bs = op.read("config/opendal.toml").await?;\n    Ok(bs)\n}`;
 
 function ArticleBody() {
   return (
@@ -20,7 +20,7 @@ function ArticleBody() {
       <CodeBlock language="rust" filename="src/config.rs" lineNumbers highlight={[7]} code={READ_FN} />
 
       <Callout variant="note" title="Note">
-        每个 <code>Operator</code> 都是廉价的句柄 — clone 它几乎没有成本,所以放心在任务之间传递。
+        Every <code>Operator</code> is a cheap handle — cloning one costs almost nothing, so pass it freely between tasks.
       </Callout>
 
       <h2 id="the-read-path">The read path</h2>
@@ -53,7 +53,7 @@ function ArticleBody() {
       <h2 id="wrapping-up">Wrapping up</h2>
       <p>
         The magic of OpenDAL isn&rsquo;t any single clever trick — it&rsquo;s the discipline of a clean layer stack and
-        a narrow, honest API. 把复杂留给库,把简单留给用户。 That&rsquo;s the whole game.
+        a narrow, honest API. Keep the complexity in the library, hand the simplicity to the user. That&rsquo;s the whole game.
       </p>
     </article>
   );

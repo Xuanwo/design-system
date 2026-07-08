@@ -28,7 +28,7 @@ function Hero() {
           fontSize: "var(--text-lg)", color: "var(--fg-muted)", lineHeight: "var(--leading-relaxed)",
           maxWidth: 540, margin: "var(--space-5) 0 0",
         }}>
-          开源开发者，专注于存储与数据系统。I maintain <strong style={{ color: "var(--fg)", fontWeight: 600 }}>Apache OpenDAL</strong> and
+          Open-source developer focused on storage and data systems. I maintain <strong style={{ color: "var(--fg)", fontWeight: 600 }}>Apache OpenDAL</strong> and
           write about async Rust, distributed storage, and the craft of building reliable infrastructure.
         </p>
         <div style={{ display: "flex", gap: 12, marginTop: "var(--space-6)", flexWrap: "wrap" }}>

@@ -16,7 +16,7 @@
 <div id="root"></div>
 <script type="text/babel">
 const { CodeBlock } = window.XuanwoDesignSystem_8e9a9d;
-const rust = `use opendal::Operator;\n\nasync fn read(op: Operator) -> Result<Vec<u8>> {\n    let bs = op.read("漩涡.txt").await?;\n    Ok(bs.to_vec())\n}`;
+const rust = `use opendal::Operator;\n\nasync fn read(op: Operator) -> Result<Vec<u8>> {\n    let bs = op.read("config.txt").await?;\n    Ok(bs.to_vec())\n}`;
 function Demo() {
   return (
     <React.Fragment>

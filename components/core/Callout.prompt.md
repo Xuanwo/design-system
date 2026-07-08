@@ -1,7 +1,7 @@
 Admonition / note block for docs and long-form articles. Carries a default icon per variant.
 
 ```jsx
-<Callout variant="note" title="Note">中文 and English both read cleanly here.</Callout>
+<Callout variant="note" title="Note">Reads cleanly at any body size.</Callout>
 <Callout variant="warning" title="Heads up">This API is unstable.</Callout>
 <Callout variant="accent">A quiet aside that ties to the brand.</Callout>
 ```

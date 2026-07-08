@@ -3,7 +3,7 @@ The base surface panel. Compose anything inside it; turn on `interactive` (or pa
 ```jsx
 <Card>
   <h3>Reading list</h3>
-  <p>Notes on storage, async Rust, and 漩涡.</p>
+  <p>Notes on storage, async Rust, and building in the open.</p>
 </Card>
 
 <Card href="/posts/opendal" interactive>
